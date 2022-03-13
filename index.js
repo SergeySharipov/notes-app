@@ -50,6 +50,15 @@ app.post('/api/notes', async (req, res) => {
   res.json(note)
 })
 
+app.get('/api/notes/:id', async (req, res) => {
+  const note = await Note.findByPk(req.params.id)
+  if (note) {
+    res.json(note)
+  } else {
+    res.status(404).end()
+  }
+})
+
 const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
