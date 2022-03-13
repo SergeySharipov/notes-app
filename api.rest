@@ -11,3 +11,10 @@ Content-Type: application/json
 http://localhost:3001/api/notes/1
 ###
 http://localhost:3001/api/notes/-1
+###
+PUT http://localhost:3001/api/notes/3
+Content-Type: application/json
+
+{
+  "important": false
+}
