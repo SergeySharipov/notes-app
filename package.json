@@ -11,11 +11,12 @@
     "sequelize": "^6.6.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.13",
+    "gen-env-template": "^2.0.5"
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "gen-env-template && nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Serhii Sharipov",
